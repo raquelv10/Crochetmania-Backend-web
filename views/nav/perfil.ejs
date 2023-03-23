@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetmania-Mi Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!--  fin favicon -->
+    <!-- <link rel="stylesheet" href="../css/Pre-loader.css"> -->
+    <link rel="stylesheet" href="../css/reponsive.css">
+    <link rel="stylesheet" href="../css/miperfil.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- <script src="../js/pre-loader.js"></script> -->
+    <script src="../js/scroll.js"></script>
+    <script src="../js/aside.js"></script>
+    <script src="../js/buscador.js"></script>
+    <script src="../js/colapsar.js"></script>
+    <script src="../js/perfil.js" type="module"></script>
+
+</head>
+
+<body>
+
+    <!-- div de carga del PRE-LOADER -->
+   <!--  <div class="pre-loader"></div> -->
+
+    <!-- DIV CONTENEDOR DE TODO -->
+    <div class="container">
+        <!-- ASIDE -->
+        <%- include('../partials/aside.ejs') %>
+
+            <!-- NAVBAR SUPERIOR -->
+
+            <%- include('../partials/nav_sup.ejs') %>
+
+                <!-- Código de cookies -->
+                <%- include('../partials/cookies.ejs') %>
+
+                    <!-- HEADER --->
+                    <header>
+                        <div id="logo_header"></div>
+                    </header>
+
+                    <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+                    <%- include('../partials/buscador.ejs') %>
+
+                        <!-- NAVBAR PRINCIPAL -->
+                        <%- include('../partials/nav_inf.ejs') %>
+
+                            <!-- CONTENIDO PRINCIPAL -->
+                            <main class="col-m-12">
+                                <section class="col-m-8">
+                                    <form class="form-perfil col-m-8" enctype="multipart/form-data">
+                                        <h1 class="titulo">Perfil de Usuario</h1>
+                                        <div class="imagenPerfil">
+                                            <!-- Pone la imagen de perfil por defecto si no está en la base de datos.  -->
+                                            <%  if(perfil[0].imagen === null || perfil[0].imagen === "" ){ %>
+                                                <img src="../img/perfil.jpg" alt="imagen_perfil">
+                                            <% } else { %>
+                                                <img src="<%= perfil[0].imagen %>" alt="imagen_perfil">
+
+                                            <% } %>
+                                            
+                                            <div class="container-botonFile">
+                                                <label for="imagenPerfil" class = "labelFile" ><i class="fa-solid fa-user"></i></label>
+                                                <input type="file" class="custom-file-input botonFile" id="imagenPerfil"
+                                                    name="imagenPerfil">
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <label for="name" class="etiqueta">Nombre</label>
+                                        <input class="campo" type="text" id="name" name="nombre"
+                                            value="<%= userName %>">
+
+                                        <label for="apell1" class="etiqueta">Primer Apellido</label>
+                                        
+                                        <input class="campo" type="text" id="apell1" name="apell1" value="<%= perfil[0].apell1 %>" >
+
+                                        <label for="apell2" class="etiqueta">Segundo Apellido</label>
+                                        <input class="campo" type="text" id="apell2" name="apell2" value="<%= perfil[0].apell2 %>">
+
+                                        <label for="email" class="etiqueta">Correo Electrónico</label>
+                                        <input class="campo" type="email" id="email" name="emailP"
+                                        value="<%= userEmail %>">
+
+                                        <label for="calle" class="etiqueta">Calle</label>
+                                        <input class="campo" type="text" id="calle" name="calle" value="<%= perfil[0].apell2 %>" >
+                                        <div class= "flex-direccion">
+                                            <div class="direccion col-m-2">
+                                                <label for="numero" class="etiqueta">Nº</label>
+                                                <input class="campo-peque" type="text" id="numero" name="numero" value="<%= perfil[0].num_calle %>">
+                                            </div>    
+                                            <div class="direccion col-m-2">
+                                                <label for="piso" class="etiqueta">Piso/Puerta</label>
+                                                <input class="campo-peque" type="text" id="piso" name="piso" value="<%= perfil[0].piso %>">
+                                            </div> 
+                                            <div class="direccion col-m-4">
+                                                <label for="otrosa" class="etiqueta">Otros datos</label>
+                                                <input class="campo-peque" type="text" id="otros" name="otros" value="<%= perfil[0].otros %>">
+                                            </div>   
+                                            <div class="direccion col-m-4">    
+                                                <label for="poblacion" class="etiqueta">Población</label>
+                                                <input class="campo-peque" type="text" id="poblacion" name="poblacion" value="<%= perfil[0].poblacion %>">
+    
+                                            </div>
+                                            <div class="direccion col-m-6">
+                                                <label for="provincia" class="etiqueta">Provincia</label>
+                                                <input class="campo-peque" type="text" id="provincia" name="provincia" value="<%= perfil[0].provincia %>">
+                                            </div>
+                                            <div class="direccion col-m-6">
+                                                <label for="cp" class="etiqueta">Código Postal</label>
+                                                <input class="campo-peque" type="text" id="cp" name="cp" value="<%= perfil[0].CP %>">
+                                            </div>
+                                        </div>
+                                        
+                                        <label for="dni" class="etiqueta">DNI</label>
+                                        <input class="campo" type="text" id="dni" name="dni" value="<%= perfil[0].DNI %>">
+   
+                                        <button type="submit" class="guardar-perfil">Guardar</button>
+                                        <div class="response2"></div>
+                                    </form>
+
+                                </section>
+
+                            </main>
+
+                            <!-- FOOTER  + SCROLL-->
+                            <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>

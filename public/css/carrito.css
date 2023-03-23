@@ -1,0 +1,230 @@
+section {
+    padding:10px !important;
+}
+/* AREAS */ 
+/* Tabla cabeceras */
+.tit-producto {
+    grid-area: tit-producto;
+    margin: auto 0;
+    
+}
+.tit-precio {
+    grid-area: tit-precio;
+    
+    margin:auto;
+}
+.tit-cantidad {
+    grid-area: tit-cantidad;
+     
+    margin:auto;
+}
+.tit-total {
+    grid-area: tit-total;
+   
+    margin:auto; 
+}
+/* Tabla productos */
+
+.nombre-producto {
+    grid-area: nombre;
+    padding-left:14px; 
+    margin-top:10px;
+    
+}
+.descripcion-producto {
+    grid-area: descripcion;
+    font-size: 14px;
+    padding-left:14px;    
+  
+}
+.imagen-producto{
+    grid-area: imagen;
+    margin:auto;
+}
+
+.cantidad {
+    grid-area: cantidad;
+    margin:auto;
+}
+.precio, .precio-producto {
+    grid-area: precio;
+    margin:auto;
+    
+}
+.precio-producto, .total-producto{
+    display:flex;
+    justify-content: space-between;
+}
+.total, .total-producto {
+    grid-area: total;
+    margin:auto;
+}
+
+/* Tabla subtotal */
+.subtotal {
+    grid-area: subtotal;
+    margin:auto;
+}
+.portes {
+    grid-area: portes;
+    margin:auto;
+  
+}
+.suma{
+    grid-area: suma;
+    margin:auto;
+}
+.subtotal-text {
+    grid-area: subtotal-text;
+    padding:10px;
+    margin:auto;
+}
+.portes-text {
+    grid-area: portes-text;
+    padding:10px;
+    margin:auto;
+}
+.suma-text{
+    grid-area: suma-text;
+    padding:10px;
+    margin:auto;
+}
+/* FIN AREAS */
+/* tabla Cabeceras */
+.cabeceras{
+    display:grid;
+    width: 100%;
+    margin-top:30px;
+    grid-template-columns:  10% 45% 15% 15% 15%;
+    grid-template-rows: 50px;
+    grid-template-areas: 'tit-producto tit-producto tit-precio tit-cantidad tit-total';
+    column-gap: 5px;
+}
+/* Linea separación */
+.separador-carrito{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(193, 191, 191, 0.56);
+}
+
+.contenedor-carrito{
+    
+    display:grid;
+    width: 100%;
+    margin-top:30px;
+    grid-template-columns: 10% 45% 15% 15% 15%;
+    grid-template-rows: 50px auto;
+    grid-template-areas: 'imagen nombre precio cantidad total'
+    'imagen descripcion precio cantidad total';
+    column-gap: 5px;
+   
+    
+}
+
+.contenedor-carrito-total{
+   display:grid;
+   width: 100%;
+   grid-template-columns: 90px 90px 90px;
+   grid-template-rows: 50px 50px 50px;
+   grid-template-areas: '. subtotal-text subtotal'
+   '. portes-text portes'
+   '. suma-text suma';
+   justify-content: flex-end;
+}
+
+.contenedor-botones{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.imagen-producto img{
+    width: 80px;
+}
+
+/* Estilos del input number */
+input[type="number"]{
+    width: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(193, 191, 191, 0.56);
+    
+    padding:5px;
+    outline: none;
+
+}
+
+.fa-trash {
+    color:#2c80ff;
+    cursor:pointer;
+    margin-left:8px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.boton-finalizar {
+    float: right;
+    width: 175px;
+}
+.boton-finalizar a {
+    
+    padding: 10px 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+/* Responsive */
+@media  (max-width: 400px) {
+
+    .contenedor-carrito{
+    
+        display:grid;
+        width: 100%;
+        margin-top:30px;
+        padding:10px;
+        grid-template-columns: 15% 5% 40% 25% 15%!important;
+        grid-template-rows: 50px 150px;
+        grid-template-areas: 'nombre nombre precio cantidad total'
+        'imagen descripcion precio cantidad total';
+        column-gap: 5px!important;
+        font-size: 14px;
+    
+    }
+    .contenedor-carrito img {
+       width: 60px; 
+    }
+    .contenedor-carrito input {
+        width: 35px;
+        padding:3px;
+    
+    }
+    #separador1{
+        display: none;
+    }
+    
+    
+    .cabeceras{
+        display:none!important;
+    }
+    section {
+        padding:0!important;
+    }
+}
+@media (max-width: 660px) {
+
+    .descripcion-producto{
+        visibility: hidden!important;
+    }
+    .contenedor-carrito{
+    
+        display:grid;
+        width: 100%;
+        margin-top:30px;
+        padding:10px;
+        grid-template-columns: 30% 5% 15% 25% 25%!important;
+        grid-template-rows: 50px 150px;
+        grid-template-areas: 'nombre nombre precio cantidad total'
+        'imagen descripcion precio cantidad total';
+        column-gap: 5px!important;
+    
+    }
+    
+}

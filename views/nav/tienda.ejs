@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetmania-Tienda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6ab9ac06da.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!--  fin favicon -->
+    <link rel="stylesheet" href="../css/Pre-loader.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reponsive.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/tienda.css">
+    <script src="../js/colapsar.js"></script>
+    <script src="../js/buscador.js"></script>
+    <script src="../js/pre-loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/aside.js"></script>
+    <script type="module" src="../js/tienda.js"></script> 
+    <script src="../js/filtro.js"></script>
+
+</head>
+
+<body>
+    <!-- div de carga del PRE-LOADER -->
+    <div class="pre-loader"></div>
+
+    <!-- DIV CONTENEDOR DE TODO -->
+    <div class="container">
+        <!-- ASIDE -->
+        <%- include('../partials/aside.ejs') %>
+        
+        <!-- NAVBAR SUPERIOR -->
+         
+        <%- include('../partials/nav_sup.ejs') %>
+         
+        <!-- Código de cookies -->
+        <%- include('../partials/cookies.ejs') %>
+         
+        <!-- HEADER --->
+        <header><div id="logo_header"></div></header>
+ 
+        <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+        <%- include('../partials/buscador.ejs') %>
+         
+        <!-- NAVBAR PRINCIPAL -->
+        <%- include('../partials/nav_inf.ejs') %>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="col-m-12">
+           
+            <section class="col-m-9">
+                 <!-- Filtro por categorías. amigurumis, herramientas, lanas -->
+                <div class="container-filtro">
+                    <input type="button" data-filter="*" value="Todos" class="boton-filtro activo" >
+                    <input type="button" data-filter="Amigurumis" value="Amigurumis" class="boton-filtro">
+                    <input type="button" data-filter="Herramientas" value="Herramientas" class="boton-filtro">
+                    <input type="button" data-filter="Lanas" value="Lanas" class="boton-filtro">
+                    
+                </div>
+                
+                <div class="contenedor-tienda">
+                    
+                    <% productos.forEach(productos => { %>
+                        <div class="container-tienda <%= productos.categoria %> " id="<%= productos.idProducto %>">
+                            <!-- Producto -->
+                            <div class="card color1">
+                                <!-- Precio -->
+                                                            
+                                <p class="precio" >
+                                    <% if(productos.stock === 0){ %>
+                                        <span  style="color:red;" class="agotado">Agotado</span>   
+                                            
+                                    <% } else { %>  
+                                        <span  style="color:green; " class="stock">En stock</span> 
+                                    <% } %> <%= productos.precio.toFixed(2) %> € 
+                                </p>
+
+                                <!-- Información del producto -->
+                                <i class="info fas fa-info-circle"></i>
+                                <p class="text"> <%= productos.descripcion %>  </p>
+                                <!-- Contenido de la tarjeta de producto -->
+                                <div class="imgBx">
+                                    <img src=" <%= productos.imagen_producto %> " alt=" <%= productos.nombre %>">
+                                </div>
+                                
+                                <div class="contentBx">
+                                    <h2><%= productos.nombre %></h2>
+                                    <div class="size">
+                                        <h3> <%= productos.h3 %> </h3>
+                                        <%  if(productos.span1 !== null){ %>
+                                            <span><%= productos.span1 %></span>
+                                        <% }
+                                        if(productos.span2 !== null){ 
+                                           if(productos.codigo === "aguj34"){ %>
+                                            <span><%= productos.span2 %></span>
+                                           <% }else { %>
+                                            <span><a class="patrones" href=<%= productos.span2 %> >Click aquí para ver el Patrón</a>
+                                            </span>
+                                           <% } %>
+                                            
+                                        <% } 
+                                        if(productos.span3 !== null){ %>
+                                            <span><%= productos.span3 %></span>
+                                        <% }
+                                        if(productos.span4 !== null){ %>
+                                            <span><%= productos.span4 %></span>
+                                        <% }
+                                        if(productos.span5 !== null){ %>
+                                            <span><%= productos.span5 %></span>
+                                        <% } %>
+                                        
+                                                                            
+                                    </div>
+                                        
+                                    <button class="btn-carrito"  id="<%= idUser %>"> Añadir al Carrito</button>
+                                    
+                                </div>
+    
+                                        
+                                
+                            </div>
+                        </div>    
+                    <% }); %>
+                </div>
+            </section>
+            
+        </main>
+
+        <!-- FOOTER  + SCROLL-->
+        <%- include('../partials/footer.ejs') %>
+        
+</body>
+
+</html>

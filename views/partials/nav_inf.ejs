@@ -1,0 +1,61 @@
+<!-- NAVBAR PRINCIPAL -->
+<div class="col-m-12 contenedor_nav">
+    <a href="/"><img id="logo-responsive" src="img/logo-mini.png" alt="Home"></a>
+    <div id="colapsar"><img src="../img/flecha_abajo.svg" alt="expandir"></div>
+    
+    <nav class="navbar col-m-8">
+           
+        <!-- COMPONENTES DEL NAVBAR -->
+        <ul class="navbar-ul">
+
+            <li id="li-logo"> <!-- desaparece en responsive -->
+                <a href="/" id="logo"><img src="img/logo-mini.png" alt="logo"></a>
+            </li>
+            <!--  Amigurumis  -->
+
+            <li id="amigurumi" class="dropdown"><a href="/amigurumis" <% if (pageName === 'amigurumis') {  %> class="active "  <% } %> >Amigurumis</a>
+                        
+                <ul class="amigurumis dropdown-content">
+                    <li><a  href="/animales" <% if (pageName2 === 'animales') {  %> class="active nivel2"  <% } %>>Animales</a></li>
+                    <li><a  href="/personajes"<% if (pageName2 === 'personajes') {  %> class="active nivel2"  <% } %>>Personajes</a></li>
+                    <li><a  href="/para-bebes" <% if (pageName2 === 'para-bebes') {  %> class="active nivel2"  <% } %>>Para bebés</a></li>
+                </ul>
+
+            </li>
+
+            <!-- Moda -->
+            <li id="menu_moda" class="dropdown"><a href="/moda" <% if (pageName === 'moda') {  %> class="active nivel1"  <% } %> >Moda</a>
+                <ul class="moda dropdown-content">
+                    <li><a href="/hombre"<% if (pageName2 === 'hombre') {  %> class="active "  <% } %>>Hombre</a></li>
+                    <li><a href="/mujer"<% if (pageName2 === 'mujer') {  %> class="active "  <% } %>>Mujer</a></li>
+                    <li><a href="/ninyos"<% if (pageName2 === 'ninyos') {  %> class="active "  <% } %>>Niños</a></li>
+                    <li><a href="/bebes"<% if (pageName2 === 'bebes') {  %> class="active "  <% } %>>Bebés</a></li>
+                    <li><a href="/disfraces"<% if (pageName2 === 'disfraces') {  %> class="active "  <% } %>>Disfraces</a></li>
+                </ul>
+            </li>
+
+            <!-- Complementos -->
+            <li id="menu_comp" class="dropdown"><a href="/complementos"  <% if (pageName === 'complementos') {  %> class="active nivel1"  <% } %>>Complementos</a>
+                <ul class="complementos dropdown-content">
+                    <li><a href="/buf-chal"<% if (pageName2 === 'buf-chal') {  %> class="active "  <% } %>>Bufandas/Chales</a></li>
+                    <li><a href="/bolsos-mochi" <% if (pageName2 === 'bolsos-mochi') {  %> class="active "  <% } %>>Bolsos/Mochilas</a></li>
+                    <li><a href="/bisuteria" <% if (pageName2 === 'bisuteria') {  %> class="active "  <% } %>>Bisutería</a></li>
+                    <li><a href="/comp-hogar" <% if (pageName2 === 'comp-hogar') {  %> class="active "  <% } %>>Complementos hogar</a></li>
+                </ul>
+            </li>
+
+            <!--  Tutoriales  -->
+            <li id="menu_tuto" class="dropdown"><a  href="/tutoriales"  <% if (pageName === 'tutoriales') {  %> class="active nivel1"  <% } %>>Tutoriales</a>
+                <ul class="tutoriales dropdown-content">
+                    <li><a href="/simbolos" <% if (pageName2 === 'simbolos') {  %> class="active "  <% } %>>Símbolos</a></li>
+                    <li><a href="/puntos-basicos" <% if (pageName2 === 'puntos-basicos') {  %> class="active "  <% } %>>Puntos básicos</a></li>
+                    <li><a href="/puntos-fantasia" <% if (pageName2 === 'puntos-fantasia') {  %> class="active "  <% } %>>Puntos fantasía</a></li>
+                </ul>
+            </li>
+            <li id="blog"><a href="/blog"  <% if (pageName === 'blog') {  %> class="active"  <% } %>>Blog</a></li>
+
+        </ul>
+        
+    </nav>
+    <div class="fondo_nav_principal"></div>
+</div>

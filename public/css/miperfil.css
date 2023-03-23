@@ -1,0 +1,342 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    height: 100%;
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap                                                         ;
+}
+
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin: 15px 50px 20px 20px;
+}
+
+.form-perfil {
+    width: 100%;
+    margin: auto;
+    padding: 40px 20px;
+    box-shadow: 0 0 6px 0 rgba(66, 29, 134, 0.8);
+    border-radius: 10px;
+    position: relative;
+   
+}
+.imagenPerfil img{
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    top:-53px;
+    left: 80%;
+
+
+}
+.container-botonFile{
+    position:relative;
+    top:50%;
+    left:86%;
+    width: 41px;
+    height: 0;
+    transform:translate(-50%,-50%);
+    
+    
+}
+.botonFile, .labelFile {
+    position: relative;
+    top:-74px;
+    left:91%;
+    cursor:pointer;
+}
+.labelFile {
+    background-color: #fff0ff;
+    box-shadow: -2px -2px 2px white, 2px 2px 2px #d557e3b7;
+    padding:6px 12px; 
+    border: 1px solid #ccc; 
+    border-radius:13px; 
+    display:inline-block; 
+    cursor:pointer"
+}
+.botonFile {
+    display:none!important;
+}
+
+.visible,
+.invisible {
+    margin: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+p {
+    color: crimson;
+    font-size: 14px;
+    height: 14px;
+}
+.etiqueta {
+    width: 100%;
+    font-size: 16px;
+    margin-left:15px;
+    color: #666;
+    font-weight: bold;
+}
+
+.campo, .campo-pass1, .campo-pass2 {
+    margin: 10px;
+    width: 95%;
+}
+.campo-pass1 {
+    margin-bottom:0;
+    width: 100%;
+
+}
+.campo-pass2 {
+    margin: 0 20px;
+    width: 100%;
+}
+.direccion input{
+   
+  width: 93%;  
+    
+}
+.flex-direccion {
+    display:flex;
+    
+    flex-wrap: wrap;
+
+}
+.campo-peque {
+    width:50%;
+    margin:10px;
+}
+.fila {
+    display:flex;
+    justify-content: center;
+}
+
+.eye img, .eye p {
+    display:inline;
+}
+
+input {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding:10px 20px 10px 5px;
+    display: block;
+    width: 95%;
+    border: 1px solid #cbc6c6;
+    border-radius:5px;    
+    margin-bottom: 18px!important;
+    
+
+}
+#imagenPerfil {
+    border: none;
+}
+.error {
+    border-color: red;
+}
+
+p {
+    color: crimson;
+    font-size: 14px;
+    height: 14px;
+}
+
+.repite {
+    margin-top: -28px!important;
+}
+
+input:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+
+button[type="submit"]{
+   
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+
+button {
+    font-family: 'roboto';
+    background: #4568DC;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #B06AB3;
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    animation-name: sombra;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+/* *************SCROLL***************** */
+
+.scroll img {
+    position: fixed !important;
+    bottom: 7% !important;
+    right: 3% !important;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #8462d5;
+    box-shadow: 0px 9px 8px #333;
+    transition: bottom 1s;
+}
+
+.scroll img:hover,
+.scroll {
+    box-shadow: 0px 9px 12px #333;
+    bottom: 9% !important;
+}
+
+.visible {
+    display: block!important;
+}
+
+.response2 {
+    text-align: center;
+}
+/******************* CSS COOKIES**************** */
+
+
+#cerrar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 130px;
+    height: 40vh;
+    z-index: 2;
+}
+
+#cerrar h1,
+#cerrar span {
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px;
+    
+}
+
+#boton-cerrar {
+    height: 60px;
+    font-size: 24px;
+}
+
+@keyframes sombra {
+    0% {
+        box-shadow: 2px 2px 8px #B06AB3;
+    }
+    25% {
+        box-shadow: 3px 3px 9px #B06AB3;
+    }
+    30% {
+        box-shadow: 4px 4px 9px #B06AB3;
+    }
+    50% {
+        box-shadow: 5px 5px 10px #B06AB3;
+    }
+    65% {
+        box-shadow: 4px 4px 9px #B06AB3;
+    }
+    75% {
+        box-shadow: 3px 3px 9spx #B06AB3;
+    }
+    100% {
+        box-shadow: 2px 2px 8px #B06AB3;
+    }
+}
+
+
+@media screen and (max-width:1170px) {
+    body {
+        flex-direction: column !important;
+        
+    }
+   
+    #login {
+        margin-top: 50px!important;
+    }
+    #volver img{
+        top: -15px;
+        left: 10px;
+        width: 50px;
+        height: 44px;
+        margin: 20px;
+    }
+    .scroll img {
+        right: 5px!important;
+        z-index: 6;
+    }
+    .direccion {
+        display:block;
+    }
+    .campo-peque{
+        width: 95%;
+    }
+}
+@media screen and (max-width:576px){
+
+    .titulo {
+        text-align: start!important;
+       
+    }
+    .imagenPerfil img {
+        width: 50px;
+        top:-87px;
+    }
+    .botonFile, .labelFile {
+        
+        top:-107px;
+       
+    }
+    .labelFile {
+        padding: 2px 8px;
+    }
+}
+    
+

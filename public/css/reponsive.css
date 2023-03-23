@@ -1,0 +1,337 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* mobiles */
+
+@media only screen and (min-width: 576px) {
+    .col-s-1 {
+        flex: 0 0 auto;
+        width: 8.33%;
+    }
+    .col-s-2 {
+        flex: 0 0 auto;
+        width: 16.66%;
+    }
+    .col-s-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-s-4 {
+        flex: 0 0 auto;
+        width: 33.33%;
+    }
+    .col-s-5 {
+        flex: 0 0 auto;
+        width: 41.66%;
+    }
+    .col-s-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-s-7 {
+        flex: 0 0 auto;
+        width: 58.33%;
+    }
+    .col-s-8 {
+        flex: 0 0 auto;
+        width: 66.66%;
+    }
+    .col-s-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-s-10 {
+        flex: 0 0 auto;
+        width: 83.33%;
+    }
+    .col-s-11 {
+        flex: 0 0 auto;
+        width: 91.66%;
+    }
+    .col-s-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+
+/* tablets */
+
+@media only screen and (min-width: 768px) {
+    .col-m-1 {
+        flex: 0 0 auto;
+        width: 8.33%;
+    }
+    .col-m-2 {
+        flex: 0 0 auto;
+        width: 16.66%;
+    }
+    .col-m-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-m-4 {
+        flex: 0 0 auto;
+        width: 33.33%;
+    }
+    .col-m-5 {
+        flex: 0 0 auto;
+        width: 41.66%;
+    }
+    .col-m-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-m-7 {
+        flex: 0 0 auto;
+        width: 58.33%;
+    }
+    .col-m-8 {
+        flex: 0 0 auto;
+        width: 66.66%;
+    }
+    .col-m-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-m-10 {
+        flex: 0 0 auto;
+        width: 83.33%;
+    }
+    .col-m-11 {
+        flex: 0 0 auto;
+        width: 91.66%;
+    }
+    .col-m-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    header {
+        height: 50vh!important;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .col-l-5 {
+        flex: 0 0 auto;
+        width: 41.66%;
+    }
+}
+/* Mis responsives especiales */
+
+@media only screen and (max-width: 320px){
+    .navbar-ul.responsive {
+        left: -36%!important;
+    }
+}
+/* @media only screen and (max-width: 576px) */
+
+@media only screen and (max-width: 576px) {
+    header div {
+        width: 58%!important;
+    }
+    h2 {
+        font-size: 23px!important;
+    }
+    h1 {
+        font-size: 28px!important;
+    }
+    #imagen13 {
+        margin-top: 52px!important;
+    }
+    #boton-cookies {
+        padding: 0 20px;
+    }
+    .cookiesms {
+        font-size: 11px!important;
+    }
+    .tabla-cookies {
+        font-size: 10px;
+    }
+  
+}
+
+@media only screen and (max-width: 695px) {
+    /* responsive del footer */
+    .footer-content {
+        flex-direction: column!important;
+        justify-content: center!important;
+        padding: 0;
+    }
+    .social ul {
+        display: flex!important;
+        justify-content: center!important;
+        flex-direction: row!important;
+    }
+    .privacidad {
+        display: flex;
+        justify-content: center;
+    }
+    .copyright-info {
+        position: relative;
+        right: 2%!important;
+        margin-top: 15px;
+        background-color: rgba(0, 0, 0, 0.514);
+    }
+    
+    /* cambiar tamaño de letra de "consulta tus dudas */
+    h2 {
+        font-size: 30px!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    header {
+        height: 40vh!important;
+    }
+    .cookiesms {
+        font-size: 13px!important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* Cambio de tamaño de los enlaces y los botones de la página complementos  */
+    .enlaces_comp button,
+    .botones_comp {
+        padding: 10px;
+        margin: 5px 5px!important;
+    }
+    .enlaces_comp, .enlaces  {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /*cambio de posición de los iconos burguer y busqueda */
+    #burguer {
+        left: 50px!important;
+    }
+    #icon-search {
+        left: 90px!important;
+    }
+    
+    /* colapsar navbar principal */
+    .navbar-ul {
+        display: none!important;
+    }
+    #logo img {
+        margin-right: 0!important;
+    }
+    #menu_principal {
+        height: 0;
+    }
+    .navbar {
+        position: absolute;
+        top: -200px;
+    }
+    /* navbar principal */
+    .navbar-ul.responsive {
+        display: flex!important;
+        flex-direction: column!important;
+        justify-content: flex-start;
+        position: relative;
+        left: 4%;
+        top: 268px;
+        width: 164px;
+        background-color: white!important;
+        box-shadow: 2px 2px 8px rgb(187, 186, 186);
+        transition: all 1s;
+        z-index: 999991;
+    }
+    #amigurumi, #menu_moda, #menu_comp, #menu_tuto, #blog {
+        width: 100%;
+    }
+    #amigurumi .dropdown-content.drop-responsive{
+        position: absolute;
+        top: 54px;
+        left: 128px;
+    }
+    #menu_moda .dropdown-content.drop-responsive{
+        position: absolute;
+        top: 54px;
+        left: 80px;
+        
+    }
+    #menu_comp .dropdown-content.drop-responsive{
+        position: absolute;
+        top: 54px;
+        left: 133px;
+    }
+    #menu_tuto .dropdown-content.drop-responsive{
+        position: absolute;
+        top: 54px;
+        left: 105px;
+        
+    }
+    #logo-responsive {
+        display:block!important;
+    }
+    #li-logo {
+        display:none;
+    }
+    #colapsar {
+        top: 33px;
+    }
+    #colapsar img {
+        width: 24px;
+        display: block!important;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    /* ocultar menu navbar superior y añadir icono expandir */
+    .cuenta-ul {
+        position: absolute;
+        display: none;
+    }
+    .expandir,
+    #flecha_abajo {
+        display: block!important;
+        z-index: 9;
+    }
+    .cuenta-ul.responsive {
+        display: flex!important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 38px;
+        width: 250px;
+        height: 394px;
+        background-color: white!important;
+        box-shadow: 2px 2px 8px rgb(187, 186, 186);
+        z-index: 999991;
+    }
+}

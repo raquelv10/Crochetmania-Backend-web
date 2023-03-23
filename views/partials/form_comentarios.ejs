@@ -1,0 +1,74 @@
+<div class="contenedor_textarea">
+    <h3>DEJA UN COMENTARIO</h3>
+    <form class="form_comentarios" enctype="multipart/form-data">
+        <% if (idUser) {  %>
+            <input type="text" id="usuario" name="nombre" placeholder="<%= userName %>">
+        <%  } else { %>
+            <input type="text" id="usuario" name="nombre" placeholder="Inicia sesión para comentar">
+        <% } %>
+        
+        <input style= "display:none" type="text" name="idEntrada" value=" <%= idEntrada %> ">
+        <textarea id="comentario" name="comentario"></textarea>
+        <button class="publicar btn">Publicar</button>
+    
+    
+        <div class="container_comentarios">
+        
+            <% comentarios.forEach(comentarios => { %>
+            <div class="contenedor-comentario" id="<%= comentarios.idComentario %>">
+                <% console.log(comentarios.imagen) %>
+                <% if (comentarios.imagen === null) {  %>
+                    <img class="imagenPerfil" src="../img/perfil.jpg" alt="imagen_perfil">
+                <%  } else { %>
+                    <img class="imagenPerfil" src="<%= comentarios.imagen %>" alt="imagen_perfil">
+                <% } %>
+                <span class="nombre"> <%= comentarios.nombre %></span>
+                <span class="fecha"> 
+                <%  const FACTOR_CONVERSION = 1000 * 60 * 60 * 24; 
+                const fecha_actual = new Date(); 
+                const fecha_comentario = comentarios.fecha_com;
+                let dias = (fecha_actual.getTime() - fecha_comentario.getTime()) / FACTOR_CONVERSION;
+                dias = parseInt(dias);
+                
+                if(dias < 1){ %>
+                    Hace menos de un día  
+                <% }else if (dias === 1){ %>
+                    Hace 1 día 
+                <% }else if (dias > 1 && dias <= 31) { %>
+                    Hace <%= dias %> días  
+
+                <% }else if (dias > 31 && dias <=365 ){
+                    let meses = parseInt(dias / 30); 
+                    if (meses === 1){ %>
+                        Hace <%= meses %> mes    
+                    <% }else{ %>
+                        Hace <%= meses %> meses
+                    <% } %>
+                    
+                <% } else if(dias > 365){ %>
+                    Hace más de 1 año
+                <% } %> </span>
+                <span class="comentario"> <%= comentarios.comentario %> </span>
+                <% if(userName === 'Admin'){ %>
+                <button class="btn papelera" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                <textarea name="respuesta" id="responder" cols="30" rows="10" placeholder="Respuesta"></textarea>
+                <button class="btn boton-responder" type="submit" >Responder</button>
+    
+                <% } %>
+
+                <% if(comentarios.respuesta !== null ) { %>                 
+                               
+                <div class = "respuesta"> 
+                    <img class="imagenPerfilAdmin" src="../img/logo-mini.png" alt="admin_crochetmania">
+                    <span class="nombre">Admin</span>
+                    <span class="comentario"><%= comentarios.respuesta %></span>
+                </div>
+                <% } %>
+                <hr>
+            <% }); %>  <!-- fin foreach -->
+            
+            </div>
+        
+        </div>
+    </form>
+</div>

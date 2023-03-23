@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetmania-Disfraces</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+    <!--  fin favicon -->
+    <link rel="stylesheet" href="../../css/Pre-loader.css">
+    <link rel="stylesheet" href="../../css/reponsive.css">
+    <link rel="stylesheet" href="../../css/videos.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/scroll.js"></script>
+    <script src="../../js/pre-loader.js"></script>
+    <script src="../../js/sesion.js"></script>
+    <script src="../../js/aside.js"></script>
+    <script src="../../js/buscador.js"></script>
+    <script src="../../js/colapsar.js"></script>
+    <script src="../../js/cookies.js"></script>
+</head>
+<body>
+   <!-- div de carga del PRE-LOADER -->
+   <div class="pre-loader"></div>
+
+   <!-- DIV CONTENEDOR DE TODO -->
+   <div class="container">
+       <!-- ASIDE -->
+       <%- include('../../partials/aside.ejs') %>
+        
+       <!-- NAVBAR SUPERIOR -->
+        
+       <%- include('../../partials/nav_sup.ejs') %>
+        
+       <!-- Código de cookies -->
+       <%- include('../../partials/cookies.ejs') %>
+        
+       <!-- HEADER --->
+       <header><div id="logo_header"></div></header>
+
+       <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+       <%- include('../../partials/buscador.ejs') %>
+        
+       <!-- NAVBAR PRINCIPAL -->
+       <%- include('../../partials/nav_inf.ejs') %>
+
+       <!-- CONTENIDO PRINCIPAL -->
+        <main class="col-m-12">
+            <section class="col-m-8 contenedor_videos">
+
+            <!-- Campanilla -->
+            <h2 id="campanilla">Campanilla</h2>
+            <div class="separador"></div>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/zBB5bMMkr8Y" title="Tutorial disfraz de Campanilla Crochet | Ganchillo" frameborder="0"></iframe>
+
+            <!-- Minnie para bebés -->
+            <h2 id="minnie">Minnie para bebés</h2>
+            <div class="separador"></div>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/EwjBVMxBVmA" title="Tutorial disfraz Minnie para bebés Crochet | Ganchillo" frameborder="0"></iframe>
+
+            <!-- Pocahontas -->
+            <h2 id="pocahontas">Pocahontas</h2>
+            <div class="separador"></div>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/j6KZTfGSm3k" title="Tutorial disfraz Pocahontas Crochet | Ganchillo" frameborder="0"></iframe>
+
+            <!-- Vaiana -->
+            <h2 id="vaiana">Vaiana</h2>
+            <div class="separador"></div>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/BqXfSaPR3J8" title="Tutorial disfraz Vaiana Crochet | Ganchillo" frameborder="0"></iframe>
+
+            <!-- Gorro Maléfica -->
+            <h2 id="malefica"> Gorro maléfica</h2>
+            <div class="separador"></div>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/4akVSAMXteI" title="Tutorial Gorro Maléfica Crochet | Ganchillo" frameborder="0"></iframe>
+
+
+            <!-- Disfraz Sirenita para bebé -->
+            <h2 id="sirenita">Sirenita para bebé</h2>
+            <div class="separador"></div>
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/s80A9nJw7cE" title="Tutorial disfraz Sirenita para bebé Crochet | Ganchillo" frameborder="0"></iframe>
+
+            </section>
+
+
+        </main>
+
+        <!-- FOOTER  + SCROLL-->
+        <%- include('../../partials/footer.ejs') %>
+
+</body>
+</html>

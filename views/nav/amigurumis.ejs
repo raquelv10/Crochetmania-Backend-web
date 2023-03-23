@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <title>Crochetmania-Amigurumis</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!--  fin favicon -->
+    <script src="../js/slide.js"></script>
+    <script src="../js/pre-loader.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/aside.js"></script>
+    <script src="../js/buscador.js"></script>
+    <script src="../js/colapsar.js"></script>
+    <link rel="stylesheet" href="../css/reponsive.css">
+    <link rel="stylesheet" href="../css/pre-loader.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/slideshow.css">
+</head>
+
+<body>
+    <!-- div de carga del PRE-LOADER -->
+    <div class="pre-loader"></div>
+
+    <!-- DIV CONTENEDOR DE TODO -->
+    <div class="container">
+        <!-- ASIDE -->
+        <%- include('../partials/aside.ejs') %>
+        
+        <!-- NAVBAR SUPERIOR -->
+         
+        <%- include('../partials/nav_sup.ejs') %>
+         
+        <!-- Código de cookies -->
+        <%- include('../partials/cookies.ejs') %>
+         
+        <!-- HEADER --->
+        <header><div id="logo_header"></div></header>
+ 
+        <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+        <%- include('../partials/buscador.ejs') %>
+         
+        <!-- NAVBAR PRINCIPAL -->
+        <%- include('../partials/nav_inf.ejs') %>
+
+        <!-- CONTENIDO PRINCIPAL -->    
+        <main class="col-m-12">
+            <section class="col-m-8">
+
+                <div class="slide-container col-m-8">
+                    <div class="slider dia">
+                        <a href="/animales#dragon"><img src="../img/dragon.png"></a>
+                    </div>
+                    <div class="slider dia">
+                        <a href="/animales#tortuga"><img src="../img/tortuga.png"></a>
+
+                    </div>
+                    <div class="slider dia">
+                        <a href="/personajes#batman"><img src="../img/batman.jpg"></a>
+
+                    </div>
+                    <div class="slider dia">
+                        <a href="/para-bebes#osito-mordedor"><img
+                                src="../img/mordedor-osito.jpg"></a>
+
+                    </div>
+
+                </div> <!-- Fin slider -->
+
+                <div class="separador"></div>
+                <div class="enlaces_ami col-m-12">
+                    <button class="btn"><a href="/animales">Animales</a></button>
+                    <button class="btn"><a href="/personajes">Personajes</a></button>
+                    <button class="btn"><a href="/para-bebes">Para bebés</a></button>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+        <!-- FOOTER  + SCROLL-->
+        <%- include('../partials/footer.ejs') %>
+        
+</body>
+
+</html>

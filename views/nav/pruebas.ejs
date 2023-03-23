@@ -1,0 +1,6 @@
+<% console.log(perfil[0].imagen);%>
+<% if (perfil[0].imagen.length === 0) { %>
+    <img src="../img/perfil.jpg" alt="imagen_perfil">
+<% } else { %>
+    <img src=" <% perfil[0].imagen  %>" alt="imagen_perfil">
+<% } %>

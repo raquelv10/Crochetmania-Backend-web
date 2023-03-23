@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetmania-Para Bebés</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+    <!--  fin favicon -->
+    
+    <link rel="stylesheet" href="../../css/Pre-loader.css">
+    <link rel="stylesheet" href="../../css/reponsive.css">
+    <link rel="stylesheet" href="../../css/videos.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/scroll.js"></script>
+    <script src="../../js/pre-loader.js"></script>
+    <script src="../../js/sesion.js"></script>
+    <script src="../../js/aside.js"></script>
+    <script src="../../js/buscador.js"></script>
+    <script src="../../js/colapsar.js"></script>
+    <script src="../../js/cookies.js"></script>
+</head>
+
+<body>
+    <!-- div de carga del PRE-LOADER -->
+    <div class="pre-loader"></div>
+
+    <!-- DIV CONTENEDOR DE TODO -->
+    <div class="container">
+        <!-- ASIDE -->
+        <%- include('../../partials/aside.ejs') %>
+                 
+        <!-- NAVBAR SUPERIOR -->
+         
+        <%- include('../../partials/nav_sup.ejs') %>
+         
+        <!-- Código de cookies -->
+        <%- include('../../partials/cookies.ejs') %>
+         
+        <!-- HEADER --->
+        <header><div id="logo_header"></div></header>
+ 
+        <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+        <%- include('../../partials/buscador.ejs') %>
+         
+        <!-- NAVBAR PRINCIPAL -->
+        <%- include('../../partials/nav_inf.ejs') %>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="col-m-12">
+            <section class="col-m-8 contenedor_videos">
+
+                <h2 id="osito-mordedor">Osito mordedor para bebés</h2>
+                <div class="separador"></div>
+                <img class="foto" src="../../img/mordedor-osito.jpg" alt="osito-mordedor">
+                <h4>Aprende a hacer un bonito mordedor osito a crochet con la técnica amigurumi para bebés. Fácil, sencillo y rápido de hacer. Solo sigue las instrucciones con el paso a paso del vídeo tutorial.</h4>
+                <iframe title="Tutorial osito mordedor para bebés Amigurumi Crochet | Ganchillo" width="960"
+                    height="720" src="https://www.youtube.com/embed/3BSHrKPSY94" frameborder="0"></iframe>
+
+                <h2 id="pulpo">Pulpo amigurumi para bebés prematuros</h2>
+                <div class="separador"></div>
+                <img class="foto" src="../../img/Pulpo-prematuros.jpg" alt="pulpo_prematuros">
+                <h4>Aprende a tejer pulpos solidarios para Bebés prematuros. Un proyecto para ayudar a bebés recién nacidos. Estos bonitos y tiernos pulpos a crochet, les ayuda cuando no están en contacto con sus madres a mantenerlos tranquilos en sus cunas o incubadoras, el contacto con los tentáculos del pulpo les da la sensación de que es el cordón umbilical.</h4>
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/bD23TuKNTow" title="Tutorial Pulpo para bebés prematuros Crochet | Ganchillo" frameborder="0"></iframe>
+
+
+                <h2 id="sonajero">Sonajero</h2>
+                <div class="separador"></div>
+                <img class="foto" src="../../img/sonajero-redondo.png" alt="sonajero">
+                <h4>Aquí tienes el video tutorial</h4>
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/IiNzICXw9ME" title="Tutorial Sonajero redondo Crochet | Ganchillo" frameborder="0"></iframe>
+
+            </section>
+
+        </main>
+
+    <!-- FOOTER  + SCROLL-->
+    <%- include('../../partials/footer.ejs') %>
+    
+</body>
+
+</html>

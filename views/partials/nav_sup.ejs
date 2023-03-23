@@ -1,0 +1,27 @@
+<div class="col-m-12 contenedor_nav_cuenta">
+    <!-- ICONOS DE BURGUER Y BÚSQUEDA -->
+    <div id="contenedor-iconSearch"><img id="icon-search" src="img/lupa.svg" alt="buscar" style="display: block;"></div>
+    <div id="burguer" style="display: block;"><img src="img/burguer.png" alt="menu"></div>
+
+    <nav class="cuenta">
+        <ul class="cuenta-ul">
+
+            <% if (!idUser) { %>
+                <li><a id="micuenta" href="/micuenta">Iniciar sesión</a></li>
+                <li><a id="enlace2" href="/tienda" <% if (pageName === 'tienda') {  %> class="active"  <% } %>>Tienda</a></li>
+                <li><a id="enlace3" href="/contacto" <% if (pageName === 'contacto') {  %> class="active"  <% } %>>Contacto</a></li>
+
+            <% } else { %>
+                                
+                <li class="dropdown"><a id="perfil" href="/perfil"  <% if (pageName === 'perfil') {  %> class="active "  <% } %>><%= userName %></a></li>
+                <li><a id="enlace2" href="/tienda" <% if (pageName === 'tienda') {  %> class="active"  <% } %>>Tienda</a></li>
+                <li class="dropdown"><a id="enlace1" href="/carrito"  <% if (pageName === 'carrito') {  %> class="active"  <% } %>><img id="carrito-icon" src=""  alt="">  </a><span></span></li>
+                <li><a id="enlace3" href="/contacto" <% if (pageName === 'contacto') {  %> class="active"  <% } %>>Contacto</a></li>
+                <li><a href="/cerrar"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+            <% } %>
+
+        </ul>
+    </nav>
+    <div class="fondo_nav_superior"></div>
+</div>
+<div class="expandir"><img src="img/flecha_abajo.svg" alt="expandir"></div>

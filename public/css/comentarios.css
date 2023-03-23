@@ -1,0 +1,59 @@
+.contenedor-comentario {
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.imagenPerfil {
+    width: 70px;
+    border-radius: 50%;
+    width: 70px;
+    border-radius: 50%;
+    margin:10px;
+
+} 
+
+.imagenPerfilAdmin {
+    width: 50px;
+   
+    margin:10px;
+}
+.nombre {
+    font-weight: bolder;
+    font-size: 20px;
+    margin:10px;
+}
+
+.fecha {
+    width: 300px;
+    margin: 20px !important;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.comentario {
+    margin-left: 20px!important;
+}
+
+.respuesta {
+    margin-left: 50px;
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#responder {  /*  textarea para la respuesta */
+    padding: 20px;
+    margin:20px;
+    width: 100%;
+}
+button{
+    margin-left: 20px;
+}
+.papelera {
+    margin-left: 20px;
+    width: 50px!important;
+    padding: 5px;
+}

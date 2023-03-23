@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="cDMili4Kfv3efjzx6St_0NaCUD2FJwmDuxntAEDlEHM" />
+    <title>Crochetmania</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!--  fin favicon -->
+    <link rel="stylesheet" href="css/Pre-loader.css">
+    <link rel="stylesheet" href="css/reponsive.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/pre-loader.js"></script>
+    
+    <script src="js/scroll.js"></script>
+    <script src="js/aside.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="js/colapsar.js"></script>
+    
+</head>
+
+<body>
+
+    <!-- div de carga del PRE-LOADER -->
+    <div class="pre-loader"></div>
+
+    <!-- DIV CONTENEDOR DE TODO -->
+    <div class="container">
+        <!-- ASIDE -->
+        <%- include('partials/aside.ejs') %>
+        
+        <!-- NAVBAR SUPERIOR -->
+        <%- include('partials/nav_sup.ejs') %>
+        
+        <!-- Código de cookies -->
+        <%- include('partials/cookies.ejs') %>
+        
+        <!-- HEADER --->
+        <header><div id="logo_header"></div></header>
+
+        <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+        <%- include('partials/buscador.ejs') %>
+        
+        <!-- NAVBAR PRINCIPAL -->
+        <%- include('partials/nav_inf.ejs') %>
+      
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="col-m-12">
+            <section class="col-m-8">
+                <h2>Tutoriales de Ganchillo, Punto, y más… Crea y Disfruta!</h2> <br>
+
+                <p class="parrafo-bienvenida">Si te gusta crear con lanas e hilos y quieres aprenderlo todo sobre el Crochet o Ganchillo, Punto, Punto Tunecino, Bordado y Punto de Cruz, estás en el sitio perfecto. En Patronarte te enseñaré todo lo que necesitas para dar rienda suelta
+                    a tu imaginación. Tutoriales sobre técnicas y puntos con vídeos paso a paso. Y patrones totalmente gratuitos.</p>
+
+                <h2 style="text-align: center;">Amigurumis</h2>
+
+                <div class="row">
+                    <div class="col-m-4 imagen" id="imagen1">
+                        <div class="content-leer">
+                            <a href="/amigurumis" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen2">
+                        <div class="content-leer">
+                            <a href="/amigurumis" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen3">
+                        <div class="content-leer">
+                            <a href="/amigurumis" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separador">
+                    <h2 style="text-align: center;">Moda mujer, hombre y niños</h2>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-m-4 imagen" id="imagen4">
+                        <div class="content-leer">
+                            <a href="/moda" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen5">
+                        <div class="content-leer">
+                            <a href="/moda" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen6">
+                        <div class="content-leer">
+                            <a href="/moda" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separador">
+                    <h2 style="text-align: center;">Complementos</h2>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-m-4 imagen" id="imagen7">
+                        <div class="content-leer">
+                            <a href="/complementos" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen8">
+                        <div class="content-leer">
+                            <a href="/complementos" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen9">
+                        <div class="content-leer">
+                            <a href="/complementos" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separador">
+                    <h2 style="text-align: center;">Tutoriales</h2>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-m-4 imagen" id="imagen10">
+                        <div class="content-leer">
+                            <a href="/tutoriales" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen11">
+                        <div class="content-leer">
+                            <a href="/tutoriales" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="col-m-4 imagen" id="imagen12">
+                        <div class="content-leer">
+                            <a href="/tutoriales" class="leer-mas">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separador">
+                    <h2 style="text-align: center;">Consulta tus dudas</h2>
+                </div>
+
+
+                <div class="col-m-12 imagen13" id="imagen13">
+                    <div class="content-leer2">
+                        <a href="/contacto" class="leer-mas">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="final">
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+        <!-- FOOTER  + SCROLL-->
+        <%- include('partials/footer.ejs') %>
+      
+</body>
+
+</html>

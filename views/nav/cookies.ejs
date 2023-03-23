@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetmania-Privacidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!--  fin favicon -->
+    <!-- <link rel="stylesheet" href="../css/Pre-loader.css"> -->
+    <link rel="stylesheet" href="../css/reponsive.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/scroll.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/buscador.js"></script>
+    <script src="../js/cookies.js"></script>
+    <script src="../js/aside.js"></script>
+    <script src="../js/colapsar.js"></script>
+
+</head>
+
+<body>
+
+    <!-- div de carga del PRE-LOADER -->
+    <div class="pre-loader"></div>
+
+    <!-- DIV CONTENEDOR DE TODO -->
+    <div class="container">
+        <!-- ASIDE -->
+        <%- include('../partials/aside.ejs') %>
+        
+        <!-- NAVBAR SUPERIOR -->
+         
+        <%- include('../partials/nav_sup.ejs') %>
+         
+        <!-- Código de cookies -->
+        <%- include('../partials/cookies.ejs') %>
+         
+        <!-- HEADER --->
+        <header><div id="logo_header"></div></header>
+ 
+        <!-- BUSCADOR DE GOOGLE  https://programmablesearchengine.google.com/controlpanel/all-->
+        <%- include('../partials/buscador.ejs') %>
+         
+        <!-- NAVBAR PRINCIPAL -->
+        <%- include('../partials/nav_inf.ejs') %>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="col-m-12">
+            <section class="col-m-8">
+                <h2>Política de Cookies</h2>
+                <span>Te aviso que en este sitio se puede utilizar cookies cuando el usuario navega por las diferentes páginas del sitio. Durante el uso de nuestra página web aceptas y autorizas expresamente el uso de cookies, de acuerdo con nuestra política de privacidad.</span>
+
+                <h2>¿Qué son las cookies?</h2>
+                <span>Una cookie es un fichero muy pequeño que se descarga en el ordenador/smartphone/tablet del usuario al acceder a determinadas páginas web para almacenar y recuperar información sobre la navegación que se efectúa desde dicho equipo. Para conocer más información sobre las cookies, le invito a acceder al siguiente <span><a href="http://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)">enlace:</a></span>
+                </span>
+
+                <h2>¿Para qué sirven las cookies?</h2>
+                <span>La utilización de las cookies tiene como finalidad exclusiva recordar las preferencias del usuario (idioma, país, inicio de sesión, características de su navegador, información de uso de nuestra Web, etc.)</span>
+                <span>Recordando sus preferencias sabremos las características del ordenador que está usando y así podremos ofrecerle una mejor experiencia de navegación. Las cookies pueden ayudar a nuestro sitio Web a distinguir el navegador del usuario como visitante anterior y así guardar y recordar las preferencias que puedan haberse establecido mientras el usuario estaba navegando por el sitio, personalizar las páginas de inicio, identificar qué sectores de un sitio han sido visitados o mantener un registro de selecciones en un “carro de compra”.</span>
+                <span>Asimismo pueden ser utilizadas para obtener información acerca del tráfico dentro del propio site y estimar el número de visitas realizadas.</span>
+                <span>Normalmente los sitios Web utilizan las cookies para obtener información estadística sobre sus páginas Web. Tenga en cuenta que recogemos datos sobre sus movimientos y uso de nuestra Web como datos estadísticos, no personales.</span>
+
+                <h2>Tipos y finalidades de las cookies</h2>
+                <span>A continuación se presenta una lista de las cookies que puede encontrar en nuestro sitio Web y una breve descripción de su finalidad. Le aseguramos que ninguna de ellas conserva información de identificación personal sobre usted. Algunas cookies personalizan su visita, otras recuerdan sus preferencias, mientras que otras solo nos proveen estadísticas de los visitantes.
+                </span>
+                <table class="tabla-cookies">
+
+                    <tr>
+                        <td colspan="2">Cookies</td>
+                        <td>Información (*)</td>
+                        <td>Finalidad</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">COOKIES PROPIAS</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Estrictamente necesarias</td>
+                        <td>Sesión, registro, navegación</td>
+                        <td>Gestión del registro, garantizar los recursos del servidor para la navegación.Propias de la plataforma WordPress.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">COOKIES DE TERCEROS(la información recogida a continuación ha sido facilitada por esos terceros)</td>
+                    </tr>
+                    <tr>
+                        <td>Analíticas</td>
+                        <td>Google Analytics</td>
+                        <td>Número de visitas, páginas o secciones visitadas, tiempo de navegación, sitios visitados antes de entrar en esta página, detalles sobre los navegadores usados.</td>
+                        <td>Informes estadísticos sobre el tráfico del sitio web, su audiencia total y la audiencia en una determinada campaña publicitaria.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Statcounter</td>
+                        <td>Número de visitas, páginas o secciones visitadas, tiempo de navegación, sitios visitados antes de entrar en esta página, detalles sobre los navegadores usados.</td>
+                        <td>Informes estadísticos sobre el tráfico del sitio web</td>
+                    </tr>
+
+                </table>
+
+
+
+                <h2>Salvaguardias de protección</h2>
+                <span>El usuario puede configurar su navegador para aceptar, o no, las cookies que recibe o para que el navegador le avise cuando un servidor quiera guardar una cookie o borrarlas de su ordenador. Puede encontrar las instrucciones en la configuración de seguridad en su navegador Web.
+
+                </span>
+                <span>Puede hacer uso de la sección “Ayuda” que encontrará en la barra de herramientas de la mayoría de navegadores para cambiar los ajustes de su ordenador, sin embargo, algunas de las características de nuestros servicios online pueden no funcionar o pueden resultar más complicadas de acceder si rechaza todas las cookies.</span>
+                <span>Muchos navegadores permiten activar un modo privado mediante el cual las cookies se borran siempre después de su visita.</span>
+                <span>Por favor, lea atentamente la sección de ayuda de su navegador para conocer más acerca de como activar el “modo privado”. Podrá seguir visitando nuestra Web aunque su navegador esté en “modo privado”, no obstante, la experiencia de usuario puede no ser óptima y algunas utilidades pueden no funcionar.</span>
+
+            </section>
+        </main>
+        <!-- FOOTER  + SCROLL-->
+        <%- include('../partials/footer.ejs') %>
+        
+
+</body>
+
+</html>

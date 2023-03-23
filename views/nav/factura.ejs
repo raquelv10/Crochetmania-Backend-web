@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <!--  fin favicon -->
+    <link rel="stylesheet" href="../css/factura.css">
+
+    <script type="module" src="../js/factura.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="brand-section">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="text-white">CROCHETMANIA</h1>
+                </div>
+                <div class="col-6">
+                    <div class="company-details">
+                        <p class="text-white">Crochetmania,SL</p>
+                        <p class="text-white">c/ Balmes, 156 local</p>
+                        <p class="text-white">08027 Barcelona</p>
+                        <p class="text-white">Telf. 935 896 541</p>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="body-section">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="factura" style="border: 1px solid black;padding:10px;">
+                            <h2 class="heading">Factura No.: <%= productos[0].idFactura %></h2>
+                            <% 
+                             let fecha =productos[0].fechaFactura.toISOString().split('T')[0];
+                             let array_fecha = fecha.split('-'); 
+                             fecha = array_fecha.reverse(); %>
+                            <p class="sub-heading">Fecha factura:  <%= (Number(fecha[0])+1) +"-"+ fecha[1] +"-"+ fecha[2] %> </p>
+                        </div>
+                        <div class="factura" style="border: 1px solid black;border-top: none;padding:10px;">
+                            <p class="sub-heading">Código cliente: <%= productos[0].idUsuario %></p>
+                            <p class="sub-heading">NIF: <%= productos[0].DNI %></p>
+                        </div>
+
+                    </div>
+                    <div class="col-5 datos">
+                        <p class="sub-heading"><%= productos[0].nombre_usuario %> <span><%= productos[0].apell1 %> </span><span> <%= productos[0].apell2 %></span></p>
+                        <p class="sub-heading"><%= productos[0].calle %>, <span> <%= productos[0].num_calle %></span> <span> <%= productos[0].piso %></span> <span> <%= productos[0].otros %></span></p>
+                        <p class="sub-heading"><%= productos[0].CP %> <span> <%= productos[0].poblacion %></span></p>
+                        <p class="sub-heading"><%= productos[0].provincia %></p>
+                        
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <section class="body-section">
+                <h3 class="heading">Detalle factura</h3>
+                <br>
+                <table class="table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th class="w-20">Precio (sin iva)</th>
+                            <th class="w-20">cantidad</th>
+                            <th class="w-20">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <% productos.forEach(productos=> { %>
+                        <tr>
+                            <td><%= productos.codigo %></td>
+                            <td><%= productos.nombre %></td>
+                            <% let precio = (productos.precio / 1.21); %> 
+                            <td><%= parseFloat(precio.toFixed(2)) %> €</td>
+                            <td><%= productos.cantidad %></td>
+                            <td class="total"><%= parseFloat(precio.toFixed(2)) * productos.cantidad.toFixed(2) %> </td>
+                        </tr>
+                        <% }) %>
+
+
+                        <tr>
+                            <td colspan="4" class="text-right">Sub Total</td>
+                            <td class="subtotal"> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right">iva </td>
+                            
+                            <td class="iva"> </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right ">Portes</td>
+                            <td class="portes">2,99</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right " >TOTAL</td>
+                            <td class="suma"> </td>
+                        </tr>
+
+                    
+                    </tbody>
+                </table>
+                <br>
+                <h3 class="heading">Estado: Pagado</h3>
+                
+            </section>
+           
+        </main>
+        <button class="imprimir btn"> Imprimir Factura</button>
+        <footer>
+            <p>&copy; Copyright 2022 - Crochetmanía
+                <a href="https://www.crochetmania.com/" class="float-right">www.crochetmania.com</a>
+            </p>
+        </footer>
+    </div>
+    
+
+    
+   
+</body>
+
+</html>
