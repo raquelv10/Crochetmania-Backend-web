@@ -1,10 +1,10 @@
 import { createConnection } from 'mysql';
 
 const conn = createConnection ({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'Crochetmania'
+    host: 'eu-cdbr-west-02.cleardb.net',
+    user: 'bb789a3095984b',
+    password: 'b6845986',
+    database: 'heroku_7270b661de55728'
     
 })
 
